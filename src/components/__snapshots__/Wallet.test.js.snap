@@ -8,5 +8,10 @@ exports[`Wallet renders correctly 1`] = `
     Wallet balance: 
     20
   </h3>
+  <br />
+  <input
+    className="input-wallet"
+    onChange={[Function]}
+  />
 </div>
 `;
