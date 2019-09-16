@@ -1,6 +1,7 @@
 import React, { Component} from 'react';
 import { connect } from 'react-redux';
 import { deposit, withdraw } from '../actions/balance';
+import { bindActionCreators } from 'redux';
 
 export class Wallet extends Component {
     constructor() {
@@ -31,4 +32,14 @@ export class Wallet extends Component {
     }
 }
 
-export default connect(state => { return {balance: state.balance } } , { deposit, withdraw })(Wallet);
+function mapStatetoProps(state) {
+    return {
+        balance: state.balance
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({deposit, withdraw}, dispatch);
+}
+
+export default connect(mapStatetoProps, mapDispatchToProps)(Wallet);

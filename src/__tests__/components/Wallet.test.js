@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { Wallet } from './Wallet';
+import { Wallet } from '../../components/Wallet';
 
 describe('Wallet', () => {
     const mockDeposit = jest.fn();

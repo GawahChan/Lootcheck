@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchBitcoin } from '../actions/bitcoin';
+import { bindActionCreators } from 'redux';
 
 export class Loot extends Component {
 
@@ -23,4 +24,15 @@ export class Loot extends Component {
     }
 }
 
-export default connect(state => state, { fetchBitcoin })(Loot);
+function mapStateToProps(state) {
+    return {
+        balance: state.balance,
+        bitcoin: state.bitcoin
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({fetchBitcoin}, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Loot);

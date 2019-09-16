@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Loot } from './Loot';
+import { Loot } from '../../components/Loot';
 
 describe('Loot component', () => {
     const mockFetchBitcoin = jest.fn();
