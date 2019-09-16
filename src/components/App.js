@@ -11,7 +11,7 @@ const App = () => {
             <hr />
             <Loot />
             <div>Powered by 
-                <a href='https://www.coindesk.com/price' target= '_blank'>
+                <a href='https://www.coindesk.com/price' target= '_blank' rel="noopener noreferrer">
                     Coindesk
                 </a>
             </div>
